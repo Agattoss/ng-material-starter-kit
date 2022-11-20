@@ -4,10 +4,11 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class CategoryService {
-  constructor(private _httpClient: HttpClient) {
-  }
+  constructor(private _httpClient: HttpClient) {}
 
-  getAllCategories(): Observable<any> {
-    return this._httpClient.get('https://fakestoreapi.com/products/categories')
+  getAllCategories(): Observable<string[]> {
+    return this._httpClient.get<string[]>(
+      'https://fakestoreapi.com/products/categories'
+    );
   }
 }
