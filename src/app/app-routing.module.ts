@@ -7,6 +7,7 @@ import { HolidaysSelectListComponent } from './components/holidays-select-list/h
 import { CategoriesCheckboxListComponent } from './components/categories-checkbox-list/categories-checkbox-list.component';
 import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
+import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -18,6 +19,8 @@ import { HolidayServiceModule } from './services/holiday.service-module';
 import { CategoriesCheckboxListComponentModule } from './components/categories-checkbox-list/categories-checkbox-list.component-module';
 import { CategoriesMenuComponentModule } from './components/categories-menu/categories-menu.component-module';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
+import { EmployeeFormComponentModule } from './components/employee-form/employee-form.component-module';
+import { EmployeeServiceModule } from './services/employee.service-module';
 
 @NgModule({
   imports: [
@@ -28,7 +31,8 @@ import { ProductFormComponentModule } from './components/product-form/product-fo
       { path: 'public-holidays', component: HolidaysSelectListComponent },
       { path: 'checkbox-categories', component: CategoriesCheckboxListComponent },
       { path: 'categories-menu', component: CategoriesMenuComponent },
-      { path: 'create-product', component: ProductFormComponent }
+      { path: 'create-product', component: ProductFormComponent },
+      { path: 'create-employee', component: EmployeeFormComponent }
     ]),
     ProductListComponentModule,
     ProductServiceModule,
@@ -40,7 +44,9 @@ import { ProductFormComponentModule } from './components/product-form/product-fo
     HolidayServiceModule,
     CategoriesCheckboxListComponentModule,
     CategoriesMenuComponentModule,
-    ProductFormComponentModule
+    ProductFormComponentModule,
+    EmployeeFormComponentModule,
+    EmployeeServiceModule
   ],
   exports: [RouterModule],
 })
