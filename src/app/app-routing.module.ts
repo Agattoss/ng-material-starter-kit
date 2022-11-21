@@ -6,6 +6,7 @@ import { ChipsListComponent } from './components/chips-list/chips-list.component
 import { HolidaysSelectListComponent } from './components/holidays-select-list/holidays-select-list.component';
 import { CategoriesCheckboxListComponent } from './components/categories-checkbox-list/categories-checkbox-list.component';
 import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -16,6 +17,7 @@ import { HolidaysSelectListComponentModule } from './components/holidays-select-
 import { HolidayServiceModule } from './services/holiday.service-module';
 import { CategoriesCheckboxListComponentModule } from './components/categories-checkbox-list/categories-checkbox-list.component-module';
 import { CategoriesMenuComponentModule } from './components/categories-menu/categories-menu.component-module';
+import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 
 @NgModule({
   imports: [
@@ -25,7 +27,8 @@ import { CategoriesMenuComponentModule } from './components/categories-menu/cate
       { path: 'crypto', component: ChipsListComponent },
       { path: 'public-holidays', component: HolidaysSelectListComponent },
       { path: 'checkbox-categories', component: CategoriesCheckboxListComponent },
-      { path: 'categories-menu', component: CategoriesMenuComponent }
+      { path: 'categories-menu', component: CategoriesMenuComponent },
+      { path: 'create-product', component: ProductFormComponent }
     ]),
     ProductListComponentModule,
     ProductServiceModule,
@@ -36,7 +39,8 @@ import { CategoriesMenuComponentModule } from './components/categories-menu/cate
     HolidaysSelectListComponentModule,
     HolidayServiceModule,
     CategoriesCheckboxListComponentModule,
-    CategoriesMenuComponentModule
+    CategoriesMenuComponentModule,
+    ProductFormComponentModule
   ],
   exports: [RouterModule],
 })
