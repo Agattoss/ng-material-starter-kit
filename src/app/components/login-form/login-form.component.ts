@@ -23,7 +23,7 @@ export class LoginFormComponent {
 
   onLoginFormSubmitted(loginForm: FormGroup): void {
     this._userService
-      .createUser({
+      .logUser({
         password: loginForm.get('password')?.value,
         username: loginForm.get('username')?.value,
       })

@@ -7,7 +7,7 @@ import { UserModel } from '../models/user.model';
 export class UserService {
   constructor(private _httpClient: HttpClient) {}
 
-  createUser(user: UserModel): Observable<UserModel> {
+  logUser(user: UserModel): Observable<UserModel> {
     return this._httpClient.post<UserModel>(
       'https://fakestoreapi.com/auth/login',
       user

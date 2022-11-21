@@ -9,6 +9,7 @@ import { CategoriesMenuComponent } from './components/categories-menu/categories
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -24,6 +25,8 @@ import { EmployeeFormComponentModule } from './components/employee-form/employee
 import { EmployeeServiceModule } from './services/employee.service-module';
 import { LoginFormComponentModule } from './components/login-form/login-form.component-module';
 import { UserServiceModule } from './services/user.service-module';
+import { RegisterFormComponentModule } from './components/register-form/register-form.component-module';
+import { UserCreationServiceModule } from './services/user-creation.service-module';
 
 @NgModule({
   imports: [
@@ -36,7 +39,8 @@ import { UserServiceModule } from './services/user.service-module';
       { path: 'categories-menu', component: CategoriesMenuComponent },
       { path: 'create-product', component: ProductFormComponent },
       { path: 'create-employee', component: EmployeeFormComponent },
-      { path: 'login', component: LoginFormComponent }
+      { path: 'login', component: LoginFormComponent },
+      { path: 'register', component: RegisterFormComponent }
     ]),
     ProductListComponentModule,
     ProductServiceModule,
@@ -52,7 +56,9 @@ import { UserServiceModule } from './services/user.service-module';
     EmployeeFormComponentModule,
     EmployeeServiceModule,
     LoginFormComponentModule,
-    UserServiceModule
+    UserServiceModule,
+    RegisterFormComponentModule,
+    UserCreationServiceModule
   ],
   exports: [RouterModule],
 })
