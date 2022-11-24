@@ -14,6 +14,8 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { CatFactComponent } from './components/cat-fact/cat-fact.component';
 import { AgeFromNameComponent } from './components/age-from-name/age-from-name.component';
 import { ProductSearchComponent } from './components/product-search/product-search.component';
+import { CardDetailsComponent } from './components/card-details/card-details.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -37,6 +39,9 @@ import { CatFactServiceModule } from './services/cat-fact.service-module';
 import { AgeFromNameComponentModule } from './components/age-from-name/age-from-name.component-module';
 import { AgeFromNameServiceModule } from './services/age-from-name.service-module';
 import { ProductSearchComponentModule } from './components/product-search/product-search.component-module';
+import { CardDetailsComponentModule } from './components/card-details/card-details.component-module';
+import { CardServiceModule } from './services/card.service-module';
+import { UserDetailsComponentModule } from './components/user-details/user-details.component-module';
 
 @NgModule({
   imports: [
@@ -54,7 +59,9 @@ import { ProductSearchComponentModule } from './components/product-search/produc
       { path: 'product/:id', component: ProductDetailComponent },
       { path: 'cat-fact', component: CatFactComponent },
       { path: 'age/:name', component: AgeFromNameComponent },
-      { path: 'product-search', component: ProductSearchComponent }
+      { path: 'product-search', component: ProductSearchComponent },
+      { path: 'card/:id', component: CardDetailsComponent },
+      { path: 'user/:id', component: UserDetailsComponent }
     ]),
     ProductListComponentModule,
     ProductServiceModule,
@@ -78,7 +85,10 @@ import { ProductSearchComponentModule } from './components/product-search/produc
     CatFactServiceModule,
     AgeFromNameComponentModule,
     AgeFromNameServiceModule,
-    ProductSearchComponentModule
+    ProductSearchComponentModule,
+    CardDetailsComponentModule,
+    CardServiceModule,
+    UserDetailsComponentModule
   ],
   exports: [RouterModule],
 })
