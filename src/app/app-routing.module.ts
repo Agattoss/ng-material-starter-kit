@@ -10,6 +10,8 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { CatFactComponent } from './components/cat-fact/cat-fact.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -27,6 +29,9 @@ import { LoginFormComponentModule } from './components/login-form/login-form.com
 import { UserServiceModule } from './services/user.service-module';
 import { RegisterFormComponentModule } from './components/register-form/register-form.component-module';
 import { UserCreationServiceModule } from './services/user-creation.service-module';
+import { ProductDetailComponentModule } from './components/product-detail/product-detail.component-module';
+import { CatFactComponentModule } from './components/cat-fact/cat-fact.component-module';
+import { CatFactServiceModule } from './services/cat-fact.service-module';
 
 @NgModule({
   imports: [
@@ -35,12 +40,17 @@ import { UserCreationServiceModule } from './services/user-creation.service-modu
       { path: 'categories', component: CategoriesListComponent },
       { path: 'crypto', component: ChipsListComponent },
       { path: 'public-holidays', component: HolidaysSelectListComponent },
-      { path: 'checkbox-categories', component: CategoriesCheckboxListComponent },
+      {
+        path: 'checkbox-categories',
+        component: CategoriesCheckboxListComponent,
+      },
       { path: 'categories-menu', component: CategoriesMenuComponent },
       { path: 'create-product', component: ProductFormComponent },
       { path: 'create-employee', component: EmployeeFormComponent },
       { path: 'login', component: LoginFormComponent },
-      { path: 'register', component: RegisterFormComponent }
+      { path: 'register', component: RegisterFormComponent },
+      { path: 'product/:id', component: ProductDetailComponent },
+      { path: 'cat-fact', component: CatFactComponent },
     ]),
     ProductListComponentModule,
     ProductServiceModule,
@@ -58,8 +68,11 @@ import { UserCreationServiceModule } from './services/user-creation.service-modu
     LoginFormComponentModule,
     UserServiceModule,
     RegisterFormComponentModule,
-    UserCreationServiceModule
+    UserCreationServiceModule,
+    ProductDetailComponentModule,
+    CatFactComponentModule,
+    CatFactServiceModule,
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
