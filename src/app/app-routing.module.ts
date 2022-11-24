@@ -12,6 +12,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { CatFactComponent } from './components/cat-fact/cat-fact.component';
+import { AgeFromNameComponent } from './components/age-from-name/age-from-name.component';
+import { ProductSearchComponent } from './components/product-search/product-search.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -32,6 +34,9 @@ import { UserCreationServiceModule } from './services/user-creation.service-modu
 import { ProductDetailComponentModule } from './components/product-detail/product-detail.component-module';
 import { CatFactComponentModule } from './components/cat-fact/cat-fact.component-module';
 import { CatFactServiceModule } from './services/cat-fact.service-module';
+import { AgeFromNameComponentModule } from './components/age-from-name/age-from-name.component-module';
+import { AgeFromNameServiceModule } from './services/age-from-name.service-module';
+import { ProductSearchComponentModule } from './components/product-search/product-search.component-module';
 
 @NgModule({
   imports: [
@@ -40,10 +45,7 @@ import { CatFactServiceModule } from './services/cat-fact.service-module';
       { path: 'categories', component: CategoriesListComponent },
       { path: 'crypto', component: ChipsListComponent },
       { path: 'public-holidays', component: HolidaysSelectListComponent },
-      {
-        path: 'checkbox-categories',
-        component: CategoriesCheckboxListComponent,
-      },
+      { path: 'checkbox-categories', component: CategoriesCheckboxListComponent },
       { path: 'categories-menu', component: CategoriesMenuComponent },
       { path: 'create-product', component: ProductFormComponent },
       { path: 'create-employee', component: EmployeeFormComponent },
@@ -51,6 +53,8 @@ import { CatFactServiceModule } from './services/cat-fact.service-module';
       { path: 'register', component: RegisterFormComponent },
       { path: 'product/:id', component: ProductDetailComponent },
       { path: 'cat-fact', component: CatFactComponent },
+      { path: 'age/:name', component: AgeFromNameComponent },
+      { path: 'product-search', component: ProductSearchComponent }
     ]),
     ProductListComponentModule,
     ProductServiceModule,
@@ -72,7 +76,10 @@ import { CatFactServiceModule } from './services/cat-fact.service-module';
     ProductDetailComponentModule,
     CatFactComponentModule,
     CatFactServiceModule,
+    AgeFromNameComponentModule,
+    AgeFromNameServiceModule,
+    ProductSearchComponentModule
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
