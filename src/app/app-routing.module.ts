@@ -16,6 +16,7 @@ import { AgeFromNameComponent } from './components/age-from-name/age-from-name.c
 import { ProductSearchComponent } from './components/product-search/product-search.component';
 import { CardDetailsComponent } from './components/card-details/card-details.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { ActivityComponent } from './components/activity/activity.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -42,6 +43,8 @@ import { ProductSearchComponentModule } from './components/product-search/produc
 import { CardDetailsComponentModule } from './components/card-details/card-details.component-module';
 import { CardServiceModule } from './services/card.service-module';
 import { UserDetailsComponentModule } from './components/user-details/user-details.component-module';
+import { ActivityComponentModule } from './components/activity/activity.component-module';
+import { ActivityServiceModule } from './services/activity.service-module';
 
 @NgModule({
   imports: [
@@ -50,7 +53,10 @@ import { UserDetailsComponentModule } from './components/user-details/user-detai
       { path: 'categories', component: CategoriesListComponent },
       { path: 'crypto', component: ChipsListComponent },
       { path: 'public-holidays', component: HolidaysSelectListComponent },
-      { path: 'checkbox-categories', component: CategoriesCheckboxListComponent },
+      {
+        path: 'checkbox-categories',
+        component: CategoriesCheckboxListComponent,
+      },
       { path: 'categories-menu', component: CategoriesMenuComponent },
       { path: 'create-product', component: ProductFormComponent },
       { path: 'create-employee', component: EmployeeFormComponent },
@@ -61,7 +67,8 @@ import { UserDetailsComponentModule } from './components/user-details/user-detai
       { path: 'age/:name', component: AgeFromNameComponent },
       { path: 'product-search', component: ProductSearchComponent },
       { path: 'card/:id', component: CardDetailsComponent },
-      { path: 'user/:id', component: UserDetailsComponent }
+      { path: 'user/:id', component: UserDetailsComponent },
+      { path: 'activity/:type', component: ActivityComponent },
     ]),
     ProductListComponentModule,
     ProductServiceModule,
@@ -88,8 +95,10 @@ import { UserDetailsComponentModule } from './components/user-details/user-detai
     ProductSearchComponentModule,
     CardDetailsComponentModule,
     CardServiceModule,
-    UserDetailsComponentModule
+    UserDetailsComponentModule,
+    ActivityComponentModule,
+    ActivityServiceModule,
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

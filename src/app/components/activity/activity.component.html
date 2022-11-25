@@ -1,0 +1,10 @@
+<mat-card class="card text-white bg-info mb-3" style="max-width: 18rem; padding: 20px; margin: auto; color: darkgreen">
+  <mat-card-title class="card-header" >Don't know what to do?</mat-card-title>
+  <mat-card-content>
+    <ng-container *ngIf="activity$ | async as item" class="card-body">
+      <h2 class="card-title">{{item.activity}}</h2>
+      <p class="card-text">People needed: {{item.participants}}</p>
+      <p class="card-text">Price: {{item.price}} </p>
+    </ng-container>
+  </mat-card-content>
+</mat-card>
